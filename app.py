@@ -28,6 +28,16 @@ def projects():
     return render_template("projects.html")
 
 
+@app.route("/achievements")
+def achievements():
+    return render_template("achievements.html")
+
+
+@app.route("/certifications")
+def certifications():
+    return render_template("certifications.html")
+
+
 @app.route("/resume")
 def resume():
     return send_from_directory(app.static_folder, "resume.pdf")

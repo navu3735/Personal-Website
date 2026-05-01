@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Awards & Extracurriculars — Navtesh Nijhawan{% endblock %}
+{% block description %}Awards, competition wins, and extracurricular activities of Navtesh Nijhawan.{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+    <div class="fade-in">
+        <h1>Awards &amp; Extracurriculars</h1>
+        <p class="hero-sub">Hackathons won, communities built, and skills sharpened.</p>
+    </div>
+</section>
+
+<section class="achievements-section">
+    <div class="section-head fade-in">
+        <span class="section-badge">Awards</span>
+        <h2>Competitions &amp; Recognition</h2>
+    </div>
+
+    <div class="awards-grid">
+        <article class="award-card fade-in">
+            <div class="award-media">
+                <img src="{{ url_for('static', filename='images/catalyst.png') }}" alt="Catalyst Entrepreneurship Competition award ceremony">
+                <span class="award-rank">2nd Place</span>
+            </div>
+            <div class="award-body">
+                <h3>Catalyst Entrepreneurship Competition</h3>
+                <p>Pitched a concept for <strong>Moment Energy</strong> to repurpose their second-life EV batteries to power aircraft while they sit on the ground — finishing 2nd place.</p>
+            </div>
+        </article>
+
+        <article class="award-card fade-in">
+            <div class="award-media">
+                <img src="{{ url_for('static', filename='images/hackml.png') }}" alt="DSSS HackML Hackathon closing ceremony">
+                <span class="award-rank">2nd Place</span>
+            </div>
+            <div class="award-body">
+                <h3>DSSS HackML Hackathon</h3>
+                <p>Built a regression model to predict <strong>dengue fever spread</strong> in a target region, optimising for the lowest mean-squared error against other teams' submissions.</p>
+            </div>
+        </article>
+
+        <article class="award-card fade-in">
+            <div class="award-media award-media-badge">
+                <img src="{{ url_for('static', filename='images/technation.png') }}" alt="TECHNATION AI Equity Data Student Challenge participant badge">
+                <span class="award-rank">Top 30 in Canada</span>
+            </div>
+            <div class="award-body">
+                <h3>TECHNATION AI Equity Data Challenge</h3>
+                <p>
+                    A national virtual competition exploring how AI's benefits can be shared equitably
+                    across Canada's workforce. We analysed real labour-market and demographic data to
+                    surface trends and equity impacts, then proposed a data-driven tool to address them —
+                    finishing top 30 across the country.
+                </p>
+                <div class="award-actions">
+                    <a href="https://factory.cancred.ca/obv3/credentials/84c4b033a7da7ec4f94a76f7a1c88f50ed2a263e.html" target="_blank" rel="noopener" class="btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Verify Badge
+                    </a>
+                    <a href="https://technationcanada.ca/en/events/ai-equity-data-challenge/" target="_blank" rel="noopener" class="btn-ghost">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        About the Challenge
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="award-card fade-in">
+            <div class="award-media">
+                <img src="{{ url_for('static', filename='images/igcse.png') }}" alt="Cambridge Outstanding Learner Award — Top in Botswana for IGCSE Computer Science">
+                <span class="award-rank">Top in Botswana</span>
+            </div>
+            <div class="award-body">
+                <h3>Cambridge IGCSE Computer Science</h3>
+                <p>Recognised by Cambridge Assessment International Education with the Outstanding Cambridge Learner Award for the highest mark in Botswana.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="achievements-section">
+    <div class="section-head fade-in">
+        <span class="section-badge">Extracurriculars</span>
+        <h2>Building &amp; Giving Back</h2>
+    </div>
+
+    <div class="extracurriculars-grid">
+        <article class="extra-card fade-in">
+            <div class="extra-icon">💻</div>
+            <h3>Founder — Web Development Club</h3>
+            <p>
+                Started a club that empowered young tech enthusiasts to see what it's like to build
+                things with new languages — and deviate from the boring, outdated technique of writing
+                code on paper.
+            </p>
+        </article>
+
+        <article class="extra-card fade-in">
+            <div class="extra-icon">⚡</div>
+            <h3>Instructor — STEM Club</h3>
+            <p>
+                Built tools that were beneficial to the community using basic electronic components —
+                including a soil-moisture detection system — while teaching students how to use
+                breadboards and assemble circuits.
+            </p>
+        </article>
+
+        <article class="extra-card fade-in">
+            <div class="extra-icon">📰</div>
+            <h3>MaP Journalists</h3>
+            <p>
+                Responsible for taking photos and writing journals for sporting events happening on
+                campus — from match-day coverage to player features.
+            </p>
+        </article>
+
+        <article class="extra-card fade-in">
+            <div class="extra-icon">🏏🏊</div>
+            <h3>Cricket &amp; Swimming</h3>
+            <p>Competed in school cricket and swimming, balancing academics with year-round athletics and team culture.</p>
+        </article>
+
+        <article class="extra-card fade-in extra-card-wide">
+            <div class="extra-icon">📐</div>
+            <h3>Math Instructor — Ray of Hope</h3>
+            <p>
+                Volunteered as a math instructor at <a href="https://www.linkedin.com/company/ray-of-hope-botswana/" target="_blank" rel="noopener">Ray of Hope Botswana</a>,
+                a youth-led NGO that educates and empowers orphans through weekly tutoring in math and English.
+            </p>
+        </article>
+    </div>
+</section>
+{% endblock %}
