@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Projects — Navtesh Nijhawan{% endblock %}
+{% block description %}A gallery of projects built by Navtesh Nijhawan — AI, machine learning, and game development.{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+    <div class="fade-in">
+        <h1>Things I've Built</h1>
+    </div>
+</section>
+
+<section class="projects-grid" id="projects-grid">
+
+    <!-- Pulseify -->
+    <article class="project-card fade-in">
+        <div class="card-cover">
+            <span class="card-category">Web App · AI</span>
+            <div class="card-emoji">🎧</div>
+        </div>
+        <div class="card-body">
+            <h3>Pulseify</h3>
+            <p>
+                An AI-powered song discovery platform that builds personalized queues on the fly.
+                Search any track to spin up a custom station, explore liked songs, recently played,
+                a Discover Weekly mix, artist radios, and a Focus Mix — all driven by a smart
+                recommendation engine.
+            </p>
+            <div class="tech-stack">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>TensorFlow</span>
+                <span>AI Recommendations</span>
+            </div>
+            <div class="card-actions">
+                <a href="https://pulsify-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- SmartFlow / TriageLab -->
+    <article class="project-card fade-in">
+        <div class="card-cover">
+            <span class="card-category">Machine Learning · Healthcare</span>
+            <div class="card-emoji">🚑</div>
+        </div>
+        <div class="card-body">
+            <h3>SmartFlow — TriageLab</h3>
+            <p>
+                A clinical decision-support tool that predicts a patient's Emergency Severity
+                Index (ESI 1–5) from vitals, pain score, and a free-text chief complaint.
+                Trained on MIMIC-IV-ED with a hybrid BiLSTM + CNN architecture, surfacing
+                probabilities across all severity levels and disposition guidance for clinicians.
+            </p>
+            <div class="tech-stack">
+                <span>TensorFlow</span>
+                <span>BiLSTM + CNN</span>
+                <span>MIMIC-IV-ED</span>
+                <span>Next.js</span>
+            </div>
+            <div class="card-actions">
+                <a href="https://smartflow-murex.vercel.app/" target="_blank" rel="noopener" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- VantaManji -->
+    <article class="project-card fade-in">
+        <div class="card-cover">
+            <span class="card-category">Game Dev · Java</span>
+            <div class="card-emoji">🌲</div>
+        </div>
+        <div class="card-body">
+            <h3>VantaManji: The Midnight Forest</h3>
+            <p>
+                A 2D tile-based adventure game built in Java 25 with LibGDX. Navigate a procedurally
+                generated forest through 7 levels, collect food rewards, dodge bears and thorns,
+                and manage a dynamic energy system. Features sprite animations, tile-based collision
+                detection, title/pause/win/lose screens, and keyboard-driven movement.
+            </p>
+            <div class="tech-stack">
+                <span>Java 25</span>
+                <span>LibGDX</span>
+                <span>Maven</span>
+                <span>JUnit 5</span>
+                <span>JaCoco</span>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/navu3735/Vantamanji-The-Midnight-Forest" target="_blank" rel="noopener" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.164 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.606-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.647.349-1.087.636-1.338-2.22-.252-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.446-1.27.098-2.646 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.376.203 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.31.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.577.688.479C19.137 20.164 22 16.42 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </article>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Subtle cursor tilt on card hover
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.project-card');
+        const MAX_TILT = 6;
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `translateY(-6px) rotateX(${-y * MAX_TILT}deg) rotateY(${x * MAX_TILT}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    });
+</script>
+{% endblock %}
