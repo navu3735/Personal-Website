@@ -9,16 +9,7 @@
 
 {% block content %}
 <main class="hero">
-    <div class="fade-in">
-        <img id="profile-photo" src="{{ url_for('static', filename='profile.jpg') }}" alt="Navtesh Nijhawan profile photo">
-    </div>
-
-    <div class="fade-in">
-        <h1>Navtesh Nijhawan</h1>
-        <p class="typed-line"><span id="typed"></span></p>
-    </div>
-
-    <div class="fade-in">
+    <nav class="top-nav fade-in" aria-label="Site navigation">
         <div class="social-links">
             <a href="https://github.com/navu3735" target="_blank" rel="noopener"
                class="social-btn" aria-label="GitHub">
@@ -65,6 +56,20 @@
                 Certifications
             </a>
         </div>
+    </nav>
+
+    <div class="hero-split">
+        <div class="hero-intro fade-in">
+            <h1>Navtesh<br>Nijhawan</h1>
+            <p class="typed-line"><span id="typed"></span></p>
+        </div>
+
+        <div class="hero-visual fade-in">
+            <div class="profile-glow">
+                <div class="profile-glow-ring"></div>
+                <img id="profile-photo" src="{{ url_for('static', filename='profile.jpg') }}" alt="Navtesh Nijhawan profile photo">
+            </div>
+        </div>
     </div>
 </main>
 {% endblock %}
@@ -77,15 +82,14 @@
         if (typeof Typed !== 'undefined') {
             new Typed('#typed', {
                 strings: [
-                    "Hi, I'm Navtesh 👋",
-                    "Computer Science Major 💻",
-                    "Economics Minor 📈",
-                    "Pickleball and golf enthusiast 🏓⛳",
-                    "Gym rat 🏋️"
+                    'Computer Science Major',
+                    'Economics Minor',
+                    'Pickleball & golf enthusiast',
+                    'Gym rat'
                 ],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 1500,
+                typeSpeed: 45,
+                backSpeed: 28,
+                backDelay: 1800,
                 loop: true
             });
         }

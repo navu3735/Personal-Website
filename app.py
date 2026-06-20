@@ -5,12 +5,18 @@ app = Flask(__name__)
 
 
 def _asset_version():
-    """Return mtime of the main stylesheet so the browser re-fetches on edits."""
-    path = os.path.join(app.static_folder, "css", "style.css")
-    try:
-        return int(os.path.getmtime(path))
-    except OSError:
-        return 0
+    """Return latest mtime of key static assets for cache busting."""
+    paths = [
+        os.path.join(app.static_folder, "css", "style.css"),
+        os.path.join(app.static_folder, "js", "starfield.js"),
+    ]
+    mtimes = []
+    for path in paths:
+        try:
+            mtimes.append(int(os.path.getmtime(path)))
+        except OSError:
+            pass
+    return max(mtimes) if mtimes else 0
 
 
 @app.context_processor
